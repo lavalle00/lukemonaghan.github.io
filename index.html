@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<title>Tuning Calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="./JS/calc.js"></script>
+<body onLoad="UpdateValues()">
+
+<!-- Navbar -->
+<div class="w3-top">
+<ul class="w3-navbar w3-black w3-card-2 w3-left-align">
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  </li>
+  <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">HOME</a></li>
+  <li class="w3-hide-small"><a href="https://www.forzamotorsport.net" class="w3-padding-large">Forza Website</a></li>
+  <li class="w3-hide-small"><a href="https://www.reddit.com/r/forza/comments/55ku9y/comprehensive_indepth_drift_tuning_guide/" class="w3-padding-large">Tuning Guide</a></li>
+  <li class="w3-hide-small"><a href="https://forums.forzamotorsport.net/turn10_postst10610_Tuning-Guide-for-Drifting.aspx" class="w3-padding-large">More Tuning Info</a></li>
+  <li class="w3-hide-small"><a href="http://www.superstreetonline.com/how-to/chassis-suspension/modp-1201-basic-drift-chassis-setup/" class="w3-padding-large">Even More Info</a></li>
+</ul>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <ul class="w3-navbar w3-left-align w3-black">
+    <li><a class="w3-padding-large" href="https://www.forzamotorsport.net">Forza Website</a></li>
+  </ul>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h1 class="w3-wide">Calculator</h1>
+    <p class="w3-justify">
+	
+	<h3 class="w3-wide">Tires</h3>
+	<p>Tire pressure changes the size of the contact patch of the tire, this is the amount of tire touching the ground. More tire pressure = less grip. Less tire pressure = more grip.</p>
+	<p>Front tire pressure at 40</p>
+	<p>Rear tire pressure at 26</p>
+	
+    <h3 class="w3-wide">Weight Distribution</h3>
+	<p id="WeightDisText">0</p>
+	<input id="WeightDisValue" type="range" style="width:600px;" value="50" min="0" max="100" onchange="UpdateValues()" />
+	
+    <h3 class="w3-wide">Anti-Roll Bars</h3>
+
+	<p >Anti-Roll Bar Front</p>
+	<p id="AntiRollFront">0</p>
+	
+	<p >Anti-Roll Bar Rear</p>
+	<p id="AntiRollRear">0</p>
+	
+    <h3 class="w3-wide">Springs</h3>
+	<p >Spring Front</p>
+	<p id="SpringFront">0</p>
+	
+	<p >Spring Rear</p>
+	<p id="SpringRear">0</p>
+	
+    <h3 class="w3-wide">Ride Height</h3>
+	<p>Lowwww as you can Gooooo</p>
+	
+    <h3 class="w3-wide">Rebound Stiffness</h3>
+	<p >Rebound Stiffness Front</p>
+	<p id="ReboundStiffnessFront">0</p>
+	
+	<p >Rebound Stiffness Rear</p>
+	<p id="ReboundStiffnessRear">0</p>
+	
+    <h3 class="w3-wide">Bump Stiffness</h3>
+	<p id="BumpStiffnessText">0</p>
+	<input id="BumpStiffnessValue" type="range" style="width:300px;" value="60" min="50" max="75" onchange="UpdateValues()" />
+	
+	<p >Bump Stiffness Front</p>
+	<p id="BumpFront">0</p>
+	
+	<p >Bump Stiffness Rear</p>
+	<p id="BumpRear">0</p>
+	
+    <h3 class="w3-wide">Brake Distribution</h3>
+	<p>45%</p>
+	
+    <h3 class="w3-wide">Brake Pressure</h3>
+	<p>120%</p>
+	
+    <h3 class="w3-wide">Differentials</h3>
+	<p>100% both front and back</p>
+	
+	</p>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+</body>
+</html>
