@@ -8,11 +8,11 @@ var rollBarValues = [1, 65];
 
 var springIDFront = "SpringFront";
 var springIDRear = "SpringRear";
-var springValues = [100,1000];
+var springValues = [274,1371];
 
 var reboundIDFront = "ReboundStiffnessFront";
 var reboundIDRear = "ReboundStiffnessRear";
-var reboundValues = [1,12];
+var reboundValues = [3,20];
 
 var BumpStiffness = "BumpStiffnessText";
 var BumpStiffnessSliderID = "BumpStiffnessValue";
