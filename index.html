@@ -5,7 +5,7 @@
 
 <!-- Navbar -->
 <a href="#"">HOME</a>
-<a href="https://www.forzamotorsport.net" class="w3-padding-large">Forza Website</a>
+<a href="https://www.forzamotorsport.net">Forza Website</a>
 <a href="https://www.reddit.com/r/forza/comments/55ku9y/comprehensive_indepth_drift_tuning_guide/">Tuning Guide</a>
 <a href="https://forums.forzamotorsport.net/turn10_postst10610_Tuning-Guide-for-Drifting.aspx">More Tuning Info</a>
 <a href="http://www.superstreetonline.com/how-to/chassis-suspension/modp-1201-basic-drift-chassis-setup/" >Even More Info</a>
@@ -44,13 +44,13 @@
 		<tr>
 			<td></td>
 			<td>
-				<h3 class="w3-wide">Tires</h3>
+				<h3 >Tires</h3>
 				<div>Tire pressure changes the size of the contact patch of the tire, this is the amount of tire touching the ground. More tire pressure = less grip. Less tire pressure = more grip.</div>
 				<div class="highlight">Front tire pressure at 40</div>
 				<div class="highlight">Rear tire pressure at 26</div>
 			</td>
 			<td>
-				<h3 class="w3-wide">Weight Distribution</h3>
+				<h3 >Weight Distribution</h3>
 				<div id="WeightDisText" class="highlight">0</div>
 				<div> Adjust this slider to your cars Weight Distribution</div>
 				<input id="WeightDisValue" type="range" style="width:100%;" value="50" min="0" max="100" onchange="UpdateValues()" />
@@ -60,13 +60,17 @@
 		<tr>
 			<td></td>
 			<td>
-				<h3 class="w3-wide">Anti-Roll Bars</h3>
+				<h3 >Anti-Roll Bars</h3>
+				Min<input type="number" value="1" onchange="UpdateRollBarValue(0,this.value)">
+				Max<input type="number" value="100" onchange="UpdateRollBarValue(1,this.value)">
 				<div>Anti-Roll Bar Front</div>
 				<div id="AntiRollFront" class="highlight">0</div>
 				<div >Anti-Roll Bar Rear</div>
 				<div id="AntiRollRear" class="highlight">0</div></td>
 			<td>
-				<h3 class="w3-wide">Springs</h3>
+				<h3 >Springs</h3>
+				Min<input type="number" value="1" onchange="UpdateSpringValue(0,this.value)">
+				Max<input type="number" value="2000" onchange="UpdateSpringValue(1,this.value)">
 				<div >Spring Front</div>
 				<div id="SpringFront" class="highlight">0</div>
 				
@@ -78,10 +82,13 @@
 		<tr>
 			<td></td>
 			<td>
-				<h3 class="w3-wide">Ride Height</h3>
-				<div class="highlight">Lowwww as you can Gooooo</div></td>
+				<h3>Ride Height</h3>
+				Lowwww as you can Gooooo (front up a bit though, engine movement)
+			</td>
 			<td>
-				<h3 class="w3-wide">Rebound Stiffness</h3>
+				<h3>Rebound Stiffness</h3>
+				Min<input type="number" value="1" onchange="UpdateReboundValue(0,this.value)">
+				Max<input type="number" value="30" onchange="UpdateReboundValue(1,this.value)">
 				<div >Rebound Stiffness Front</div>
 				<div id="ReboundStiffnessFront" class="highlight">0</div>
 				
@@ -93,7 +100,7 @@
 		<tr>
 			<td></td>
 			<td>
-				<h3 class="w3-wide">Bump Stiffness</h3>
+				<h3 >Bump Stiffness</h3>
 				<div id="BumpStiffnessText" class="highlight">0</div>
 				<div> Adjust this slider to your prefered bump stiffness 60% is recommended</div>
 				<input id="BumpStiffnessValue" type="range" style="width:100%;" value="60" min="50" max="75" onchange="UpdateValues()" />
@@ -105,7 +112,7 @@
 				<div id="BumpRear" class="highlight">0</div>
 			</td>
 			<td>
-				<h3 class="w3-wide">Brake Distribution</h3>
+				<h3>Brake Distribution</h3>
 				<div class="highlight">45%</div>
 			</td>
 			<td></td>

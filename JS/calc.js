@@ -4,21 +4,39 @@ var weightDisIDValue = "WeightDisText";
 
 var rollBarIDFront = "AntiRollFront";
 var rollBarIDRear = "AntiRollRear";
-var rollBarValues = [1, 65];
+var rollBarValues = [1, 100];
 
 var springIDFront = "SpringFront";
 var springIDRear = "SpringRear";
-var springValues = [274,1371];
+var springValues = [1,2000];
 
 var reboundIDFront = "ReboundStiffnessFront";
 var reboundIDRear = "ReboundStiffnessRear";
-var reboundValues = [3,20];
+var reboundValues = [1,30];
 
 var BumpStiffness = "BumpStiffnessText";
 var BumpStiffnessSliderID = "BumpStiffnessValue";
 
 var bumpIDFront = "BumpFront";
 var bumpIDRear = "BumpRear";
+
+function UpdateRollBarValue(index, value)
+{
+	rollBarValues[index] = parseInt(value);
+	UpdateValues();
+}
+
+function UpdateSpringValue(index, value)
+{
+	springValues[index] = parseInt(value);
+	UpdateValues();
+}
+
+function UpdateReboundValue(index, value)
+{
+	reboundValues[index] = parseInt(value);
+	UpdateValues();
+}
 
 function showValue(id, newValue, extrabits)
 {
